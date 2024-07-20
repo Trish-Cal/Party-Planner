@@ -1,9 +1,9 @@
 const partyContainer = document.querySelector("#party-container");
-const newPartyForm = document.querySelector("add-party-form");
+const newPartyForm = document.querySelector("#add-party-form");
 const partyName = document.querySelector("#party-name");
 const partyDescription = document.querySelector("#party-description");
-const partyDate = document.querySelector("party-date");
-const partyLocation = document.querySelector("party-location");
+const partyDate = document.querySelector("#party-date");
+const partyLocation = document.querySelector("#party-location");
 
 async function getEvents(){
     try{
@@ -27,9 +27,9 @@ function createEventsHTML(events, container){
     deleteButton.addEventListener("click", async function() {
         try {
             const res = await fetch(
-        'https://fsa-crud-2aa9294fe819.herokuapp.com/api/2109-CPU-RM-web-pt/EVENTS/${EVENT.ID}',
+        'https://fsa-crud-2aa9294fe819.herokuapp.com/api/2109-CPU-RM-web-pt/events/${event.id}',
         {
-            METHOD: "delete",
+            method: "DELETE",
         }        
     );
     console.log(res);
