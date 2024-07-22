@@ -27,7 +27,7 @@ function createEventsHTML(events, container){
     deleteButton.addEventListener("click", async function() {
         try {
             const res = await fetch(
-        'https://fsa-crud-2aa9294fe819.herokuapp.com/api/2109-CPU-RM-web-pt/events/${event.id}',
+        `https://fsa-crud-2aa9294fe819.herokuapp.com/api/2109-CPU-RM-web-pt/events/${event.id}`,
         {
             method: "DELETE",
         }        
